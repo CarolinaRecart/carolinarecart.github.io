@@ -1,0 +1,122 @@
+---
+layout: base.njk
+title: Research
+description: "Dr. Carolina Recart's research on building energy retrofits, hygrothermal performance, occupant behavior, and decarbonization of the built environment."
+---
+{# =========================================================================
+   RESEARCH PAGE (src/research.njk)
+   Data source: src/_data/research.json
+
+   HOW TO UPDATE:
+   - Research interests: edit the "interests" array in research.json
+   - Research themes: edit the "themes" array — each theme has a title,
+     summary (shown in collapsed state), and detail (shown when expanded)
+   - Tools: edit the "tools" array
+   - This section will grow over time — add new themes as your work evolves
+   ========================================================================= #}
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <h1>Research</h1>
+    <p>Decarbonizing the built environment through evidence-based, occupant-centered retrofit strategies</p>
+  </div>
+</header>
+
+<div class="page-content">
+
+  {# =========================================================================
+     RESEARCH INTERESTS — grid of topic tags
+     ========================================================================= #}
+  <section aria-labelledby="interests-heading">
+    <h2 id="interests-heading" class="section-heading">Research Interests</h2>
+
+    {% if research.interests and research.interests.length %}
+    <ul class="interests-list" aria-label="Research interests">
+      {% for interest in research.interests %}
+      <li>{{ interest }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </section>
+
+  {# =========================================================================
+     RESEARCH THEMES — expandable cards using native <details> element
+     No JavaScript needed — this is CSS-only accordion.
+     Click a card to expand the full description.
+     ========================================================================= #}
+  <section aria-labelledby="themes-heading">
+    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--space-4);">
+      <h2 id="themes-heading" class="section-heading" style="margin-bottom: 0;">Research Themes</h2>
+      <button id="expand-all-btn" onclick="toggleAllThemes()" style="padding: var(--space-2) var(--space-4); font-size: var(--text-sm); font-weight: 600; color: var(--color-accent); border: 2px solid var(--color-accent); border-radius: var(--radius-md); background: transparent; cursor: pointer; transition: background-color 0.2s, color 0.2s;">Expand All</button>
+    </div>
+    <p style="color: var(--color-text-muted); margin-bottom: var(--space-8); margin-top: var(--space-4);">Click a theme to expand for more detail. More themes will be added as research develops.</p>
+
+    {% if research.themes and research.themes.length %}
+    <div class="theme-cards" id="theme-cards-container">
+      {% for theme in research.themes %}
+      <div class="theme-card">
+        <details>
+          <summary>
+            <span class="theme-icon" aria-hidden="true">{{ theme.icon }}</span>
+            <span>
+              <strong>{{ theme.title }}</strong>
+              <span class="theme-summary"> — {{ theme.summary }}</span>
+            </span>
+          </summary>
+          <div class="theme-detail">
+            <p>{{ theme.detail }}</p>
+          </div>
+        </details>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </section>
+
+  <script>
+    function toggleAllThemes() {
+      var container = document.getElementById('theme-cards-container');
+      var details = container ? container.querySelectorAll('details') : [];
+      var btn = document.getElementById('expand-all-btn');
+      var allOpen = Array.from(details).every(function(d) { return d.open; });
+      details.forEach(function(d) { d.open = !allOpen; });
+      btn.textContent = allOpen ? 'Expand All' : 'Collapse All';
+    }
+  </script>
+
+  {# =========================================================================
+     TOOLS & METHODS
+     ========================================================================= #}
+  <section aria-labelledby="tools-heading">
+    <h2 id="tools-heading" class="section-heading">Tools &amp; Methods</h2>
+
+    {% if research.tools and research.tools.length %}
+    <ul class="tools-list" aria-label="Software tools and methods">
+      {% for tool in research.tools %}
+      <li>{{ tool }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </section>
+
+  {# =========================================================================
+     RECENT PROJECTS (brief overview — full details on Projects page)
+     ========================================================================= #}
+  {% if research.current_projects and research.current_projects.length %}
+  <section aria-labelledby="current-heading" style="margin-top: var(--space-12);">
+    <h2 id="current-heading" class="section-heading">Recent Projects</h2>
+
+    {% for project in research.current_projects %}
+    <div style="padding: var(--space-4) 0; border-bottom: 1px solid var(--color-border);">
+      <strong>{{ project.title }}</strong><br />
+      <span class="meta">{{ project.institution }} · {{ project.dates }}</span>
+    </div>
+    {% endfor %}
+
+    <p style="margin-top: var(--space-6);">
+      <a href="/projects/" class="btn btn--outline">View all projects &rarr;</a>
+    </p>
+  </section>
+  {% endif %}
+
+</div>

@@ -1,0 +1,83 @@
+{
+  "_instructions": "Add new projects by appending an object to the 'projects' array below. Required fields: title, institution, dates, role, description, status. Optional: funding, url. Status must be 'Active' or 'Completed'.",
+
+  "projects": [
+    {
+      "id": "design-hopes",
+      "title": "Design HOPES — Home–Health Environment Assessment",
+      "institution": "University of Strathclyde",
+      "dates": "2025–present",
+      "role": "Co-Investigator",
+      "description": "Developing a toolkit to help healthcare practitioners assess the home environment as part of health and care. Built with Laura MacLean and Parastoo Sali, the work connects building and indoor environment evidence to clinical practice, supported by engagement workshops and design experiences. Part of the AHRC-funded Design HOPES programme.",
+      "funding": "AHRC (Design HOPES)",
+      "status": "Active",
+      "url": "#PLACEHOLDER-add-project-URL-if-available"
+    },
+    {
+      "id": "humans-in-the-loop",
+      "title": "Humans in the Loop — Physiological Sensing for Sufficiency-Oriented Retrofit",
+      "institution": "University of Strathclyde",
+      "dates": "Planned",
+      "role": "Principal Investigator",
+      "description": "A planned programme integrating physiological sensing with indoor environmental and energy monitoring, to right-size retrofit strategies around real occupant needs and reduce the gap between predicted and actual building performance.",
+      "status": "Planned",
+      "url": "#PLACEHOLDER-add-project-URL-if-available"
+    },
+    {
+      "id": "miesdoc",
+      "title": "MIESDOC – Modelling Innovative Scenarios for Future Domestic Comfort",
+      "institution": "Eindhoven University of Technology",
+      "dates": "2024–2025",
+      "role": "Postdoctoral Research Fellow",
+      "description": "Exploring advanced building performance simulations for future energy retrofitting scenarios, with a focus on occupant comfort and energy demand under different climate trajectories.",
+      "funding": "Eindhoven Institute for Renewable Energy",
+      "status": "Completed",
+      "url": "#PLACEHOLDER-add-project-URL-if-available"
+    },
+    {
+      "id": "hygrothermal-uw",
+      "title": "Unintended Consequences of Energy Retrofits on Hygrothermal Performance",
+      "institution": "University of Washington",
+      "dates": "2018–2023",
+      "role": "Ph.D. Research",
+      "description": "Systematic review and simulation study of energy retrofits and their inadvertent hygrothermal repercussions in residential building stock. Developed a framework for identifying moisture risk in retrofit scenarios across Pacific Northwest climates.",
+      "funding": "Fulbright-ANID Scholarship",
+      "status": "Completed",
+      "url": "#PLACEHOLDER-add-project-URL-if-available"
+    },
+    {
+      "id": "cd-ines",
+      "title": "CD-Ines — IT Tool for Airtightness Prediction",
+      "institution": "University of Bio-Bio, Chile",
+      "dates": "2013–2016",
+      "role": "Research Assistant",
+      "description": "Developed an IT tool with predictive capabilities for airtightness levels in pre-existing residential buildings in Chile. The tool was validated against blower-door test measurements.",
+      "funding": "CLP $21,330,000",
+      "status": "Completed",
+      "url": "#PLACEHOLDER-add-project-URL-if-available"
+    },
+    {
+      "id": "fondef-viu",
+      "title": "FONDEF VIU – Prefabricated Cladding System for Energy Retrofit",
+      "institution": "University of Bio-Bio, Chile",
+      "dates": "2014–2017",
+      "role": "Principal Investigator",
+      "description": "Tested strategies to elevate airtightness in low-income housing. Developed a patent-pending prefabricated cladding system designed for rapid deployment in social housing retrofit programs.",
+      "funding": "ANID (CLP $25,500,000)",
+      "status": "Completed",
+      "url": "#PLACEHOLDER-add-project-URL-if-available"
+    },
+    {
+      "_note": "Duplicate and fill in this block to add a new project",
+      "id": "PLACEHOLDER-project-id",
+      "title": "#PLACEHOLDER-Project Title",
+      "institution": "#PLACEHOLDER-Institution",
+      "dates": "#PLACEHOLDER-Year–Year",
+      "role": "#PLACEHOLDER-Your Role",
+      "description": "#PLACEHOLDER-Short description of the project.",
+      "funding": "#PLACEHOLDER-Funder (or remove this field if unfunded)",
+      "status": "Active",
+      "url": "#PLACEHOLDER-project-URL-or-remove"
+    }
+  ]
+}

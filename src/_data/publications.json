@@ -1,0 +1,126 @@
+{
+  "_instructions": "Add new publications by appending an object to the relevant array below. Required fields: authors, year, title, type. Optional fields: journal, conference, doi, url, status, notes. Carolina's name will be automatically bolded in the template — no special markup needed here. Types: 'journal', 'conference', 'inPreparation', 'patent'.",
+
+  "journal": [
+    {
+      "authors": "Loche, I., Recart, C., Kuijer, L., Loonen, R.",
+      "year": 2025,
+      "title": "Integrating residents' heating practices into energy retrofit decision-making: a sufficiency-oriented approach",
+      "journal": "Journal of Building Engineering",
+      "doi": "https://doi.org/10.1016/j.jobe.2025.113781",
+      "type": "journal"
+    },
+    {
+      "authors": "Recart, C., Sturts Dossick, C.",
+      "year": 2022,
+      "title": "Hygrothermal behavior of post-retrofit housing: a review of the impacts of the energy efficiency upgrade strategies",
+      "journal": "Energy and Buildings",
+      "doi": "https://doi.org/10.1016/j.enbuild.2022.112001",
+      "type": "journal"
+    },
+    {
+      "authors": "Kim, A., Reed, D. A., Choe, Y., Wang, S., Recart, C.",
+      "year": 2019,
+      "title": "New building cladding system using independent tilted BIPV panels with battery storage capability",
+      "journal": "Sustainability",
+      "doi": "https://doi.org/10.3390/su11205546",
+      "type": "journal"
+    },
+    {
+      "authors": "Gonzalez, A., Recart, C., Espinoza, R., Bobadilla, A.",
+      "year": 2016,
+      "title": "Simple tool to evaluate airtightness in Chilean home",
+      "journal": "Sustainability",
+      "doi": "http://doi.org/10.3390/su8101000",
+      "type": "journal"
+    }
+  ],
+
+  "conference": [
+    {
+      "authors": "Recart, C., Loche, I., Kuijer, L., Loonen, R.",
+      "year": 2025,
+      "title": "Quantifying energy efficiency potential in existing residential buildings accounting for residents' heating practices",
+      "conference": "CLIMA 2025 — International REHVA HVAC World Congress",
+      "location": "Milan, Italy",
+      "type": "conference"
+    },
+    {
+      "authors": "Loche, I., Recart, C., Kuijer, L., Loonen, R.",
+      "year": 2025,
+      "title": "Performance assessment of energy saving measures tailored to residents' heating practices",
+      "conference": "CLIMA 2025 — International REHVA HVAC World Congress",
+      "location": "Milan, Italy",
+      "type": "conference"
+    },
+    {
+      "authors": "Recart, C., Loche, I., Kuijer, L., Loonen, R.",
+      "year": 2025,
+      "title": "Rethinking retrofit approaches: evaluating the impact of occupant heating practices on efficiency and costs",
+      "conference": "COBEE 2025 — Conference on Buildings and Energy Efficiency",
+      "location": "Eindhoven, the Netherlands",
+      "type": "conference"
+    },
+    {
+      "authors": "Loche, I., Recart, C., Kuijer, L., Loonen, R.",
+      "year": 2025,
+      "title": "Resident-oriented energy-saving measures: performance assessment of a warm room for apartment buildings",
+      "conference": "COBEE 2025 — Conference on Buildings and Energy Efficiency",
+      "location": "Eindhoven, the Netherlands",
+      "type": "conference"
+    },
+    {
+      "authors": "Recart, C., Sturts Dossick, C., Mendez Echenegucia, T.",
+      "year": 2023,
+      "title": "Impacts of air cavities on hygrothermal performance of retrofitted timber frame assemblies in six U.S. climates",
+      "conference": "ASCE International Conference on Computing in Civil Engineering",
+      "location": "Corvallis, Oregon, USA",
+      "type": "conference"
+    },
+    {
+      "authors": "Recart, C., Kim, A.",
+      "year": 2020,
+      "title": "Systematic Review of Hygrothermal Computational Tools for New and Existing Buildings",
+      "conference": "ACEEE Summer Study on Energy Efficiency in Buildings",
+      "location": "Virtual",
+      "notes": "Linda Latham Scholarship recipient — Outstanding Student Research",
+      "type": "conference"
+    },
+    {
+      "authors": "Recart, C., Kim, A., Sturts Dossick, C.",
+      "year": 2020,
+      "title": "Measurements and Verification Guidelines for Weatherization Plus Health Programs",
+      "conference": "CRC 2020 — Construction Research Congress",
+      "location": "Phoenix, Arizona, USA",
+      "type": "conference"
+    },
+    {
+      "authors": "Recart, C., Diaz, M., Bobadilla, A.",
+      "year": 2016,
+      "title": "Reduction of air infiltration in timber frame dwellings through enhanced details",
+      "conference": "PLEA 2016 — Passive and Low Energy Architecture",
+      "location": "Los Angeles, USA",
+      "type": "conference"
+    },
+    {
+      "authors": "Diaz, M., Recart, C., Bobadilla, A.",
+      "year": 2015,
+      "title": "The impact on energy demand of neglecting to calculate the energy loss due to air leakage",
+      "conference": "PLEA 2015 — Passive and Low Energy Architecture",
+      "location": "Bologna, Italy",
+      "type": "conference"
+    }
+  ],
+
+  "patents": [
+    {
+      "authors": "Recart, C., Bobadilla, A.",
+      "year": 2019,
+      "title": "A prefabricated modular panel, useful for the energy rehabilitation of existing homes and/or buildings",
+      "number": "58058 INAPI",
+      "date": "03 November 2019",
+      "country": "Chile",
+      "type": "patent"
+    }
+  ]
+}

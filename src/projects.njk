@@ -1,0 +1,145 @@
+---
+layout: base.njk
+title: Projects
+description: "Research projects by Dr. Carolina Recart in building energy retrofits, hygrothermal performance, and decarbonization."
+---
+{# =========================================================================
+   PROJECTS PAGE (src/projects.njk)
+   Data source: src/_data/projects.json
+
+   HOW TO ADD A NEW PROJECT:
+   1. Open src/_data/projects.json
+   2. Copy the placeholder entry at the bottom of the "projects" array
+   3. Fill in: title, institution, dates, role, description, status
+   4. Set status to "Active" or "Completed"
+   5. Optionally add "funding" and "url" fields
+   6. Save — the page updates automatically on next build
+   ========================================================================= #}
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <h1>Projects</h1>
+    <p>Research projects spanning building simulation, energy retrofits, and housing decarbonization</p>
+  </div>
+</header>
+
+<div class="page-content">
+
+  {# Separate active, planned, and completed projects for display #}
+  {% set active_projects = [] %}
+  {% set planned_projects = [] %}
+  {% set completed_projects = [] %}
+
+  {% for project in projects.projects %}
+    {% if "#PLACEHOLDER" not in project.title %}
+      {% if project.status == "Active" %}
+        {% set active_projects = (active_projects.push(project), active_projects) %}
+      {% elif project.status == "Planned" %}
+        {% set planned_projects = (planned_projects.push(project), planned_projects) %}
+      {% else %}
+        {% set completed_projects = (completed_projects.push(project), completed_projects) %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+
+  {# =========================================================================
+     ACTIVE PROJECTS
+     ========================================================================= #}
+  {% if active_projects.length %}
+  <section aria-labelledby="active-heading">
+    <h2 id="active-heading" class="section-heading">Active Projects</h2>
+
+    <div class="project-grid">
+      {% for project in active_projects %}
+      <article class="project-card">
+        <div class="project-card-header">
+          <h3 class="project-title">{{ project.title }}</h3>
+          <span class="badge badge--active">Active</span>
+        </div>
+        <div class="project-meta">
+          <span class="project-institution">{{ project.institution }}</span>
+          <span class="project-dates">{{ project.dates }}</span>
+          <span class="project-role">{{ project.role }}</span>
+        </div>
+        <p class="project-description">{{ project.description }}</p>
+        {% if project.url and "#PLACEHOLDER" not in project.url %}
+        <a href="{{ project.url }}" target="_blank" rel="noopener" class="btn btn--sm btn--outline" style="margin-top: var(--space-4);">
+          Learn more ↗
+        </a>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {# =========================================================================
+     PLANNED / IN-DEVELOPMENT PROJECTS
+     ========================================================================= #}
+  {% if planned_projects.length %}
+  <section aria-labelledby="planned-heading">
+    <h2 id="planned-heading" class="section-heading">In Development</h2>
+
+    <div class="project-grid">
+      {% for project in planned_projects %}
+      <article class="project-card">
+        <div class="project-card-header">
+          <h3 class="project-title">{{ project.title }}</h3>
+          <span class="badge badge--inpress">In development</span>
+        </div>
+        <div class="project-meta">
+          <span class="project-institution">{{ project.institution }}</span>
+          <span class="project-dates">{{ project.dates }}</span>
+          <span class="project-role">{{ project.role }}</span>
+        </div>
+        <p class="project-description">{{ project.description }}</p>
+        {% if project.url and "#PLACEHOLDER" not in project.url %}
+        <a href="{{ project.url }}" target="_blank" rel="noopener" class="btn btn--sm btn--outline" style="margin-top: var(--space-4);">
+          Learn more ↗
+        </a>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {# =========================================================================
+     COMPLETED PROJECTS
+     ========================================================================= #}
+  {% if completed_projects.length %}
+  <section aria-labelledby="completed-heading">
+    <h2 id="completed-heading" class="section-heading">Completed Projects</h2>
+
+    <div class="project-grid">
+      {% for project in completed_projects %}
+      <article class="project-card">
+        <div class="project-card-header">
+          <h3 class="project-title">{{ project.title }}</h3>
+          <span class="badge badge--completed">Completed</span>
+        </div>
+        <div class="project-meta">
+          <span class="project-institution">{{ project.institution }}</span>
+          <span class="project-dates">{{ project.dates }}</span>
+          <span class="project-role">{{ project.role }}</span>
+        </div>
+        <p class="project-description">{{ project.description }}</p>
+        {% if project.url and "#PLACEHOLDER" not in project.url %}
+        <a href="{{ project.url }}" target="_blank" rel="noopener" class="btn btn--sm btn--outline" style="margin-top: var(--space-4);">
+          Learn more ↗
+        </a>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {# Fallback if no projects #}
+  {% if active_projects.length == 0 and planned_projects.length == 0 and completed_projects.length == 0 %}
+  <div class="empty-state">
+    <p>No projects listed yet. Add entries to <code>src/_data/projects.json</code>.</p>
+  </div>
+  {% endif %}
+
+</div>

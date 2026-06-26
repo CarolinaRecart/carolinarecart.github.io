@@ -1,0 +1,159 @@
+---
+layout: base.njk
+title: Publications
+description: "Peer-reviewed articles, conference papers, and patents by Dr. Carolina Recart."
+---
+{# =========================================================================
+   PUBLICATIONS PAGE (src/publications.njk)
+   Data source: src/_data/publications.json
+
+   HOW TO ADD A NEW PUBLICATION:
+   1. Open src/_data/publications.json
+   2. Find the array for the correct type: journal, conference, or patents
+   3. Copy an existing entry and fill in the fields
+   4. Required fields: authors, year (or status), title, type
+   5. Optional fields: journal, conference, doi, url, notes, location
+   6. Save the file — the page updates automatically on next build
+
+   CAROLINA'S NAME BOLD:
+   The template automatically bolds "Recart, C." wherever it appears in
+   the authors field. No special markup needed in the JSON.
+   ========================================================================= #}
+
+{# Page header #}
+<header class="page-header">
+  <div class="page-header-inner">
+    <h1>Publications</h1>
+    <p>Peer-reviewed articles, conference papers, and patents</p>
+  </div>
+</header>
+
+<div class="page-content">
+
+  {# =========================================================================
+     JUMP NAVIGATION — quick links to each section
+     ========================================================================= #}
+  <nav class="pub-jump-nav" aria-label="Publication categories">
+    <a href="#journal">Peer-Reviewed Articles</a>
+    <a href="#conference">Conference Papers</a>
+    <a href="#patents">Patents</a>
+  </nav>
+
+  {# Macro: highlight "Recart, C." in any author string #}
+  {# We do this by splitting on "Recart, C." and wrapping it in a <strong> #}
+  {# Since Nunjucks doesn't have a built-in replace-with-html, we use a workaround:
+     The template checks if authors contains "Recart" and renders it highlighted. #}
+
+  {# =========================================================================
+     SECTION 1 — PEER-REVIEWED JOURNAL ARTICLES
+     ========================================================================= #}
+  <section id="journal" aria-labelledby="journal-heading">
+    <h2 id="journal-heading" class="section-heading">Peer-Reviewed Articles</h2>
+
+    {% if publications.journal and publications.journal.length %}
+    <ol class="pub-list" reversed>
+      {% for pub in publications.journal | sort(true, false, "year") %}
+      <li class="pub-item">
+        <span class="pub-year">{{ pub.year }}</span>
+        <div class="pub-content">
+          <p class="pub-title">{{ pub.title }}</p>
+          <p class="pub-authors">
+            {# Bold "Recart, C." in author list #}
+            {% if "Recart" in pub.authors %}
+              {{ pub.authors | replace("Recart, C.", "**Recart, C.**") }}
+            {% else %}
+              {{ pub.authors }}
+            {% endif %}
+          </p>
+          {% if pub.journal %}
+          <p class="pub-venue"><em>{{ pub.journal }}</em></p>
+          {% endif %}
+          <div class="pub-links">
+            {% if pub.doi and pub.doi != "#PLACEHOLDER-add-DOI" %}
+            <a href="{{ pub.doi }}" target="_blank" rel="noopener" class="doi-link">
+              DOI ↗
+            </a>
+            {% endif %}
+          </div>
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+    {% else %}
+    <p style="color: var(--color-text-muted);">No journal articles listed yet. Add entries to <code>publications.json</code>.</p>
+    {% endif %}
+  </section>
+
+  {# =========================================================================
+     SECTION 2 — CONFERENCE PAPERS
+     ========================================================================= #}
+  <section id="conference" aria-labelledby="conference-heading">
+    <h2 id="conference-heading" class="section-heading">Conference Papers</h2>
+
+    {% if publications.conference and publications.conference.length %}
+    <ol class="pub-list" reversed>
+      {% for pub in publications.conference | sort(true, false, "year") %}
+      <li class="pub-item">
+        <span class="pub-year">{{ pub.year }}</span>
+        <div class="pub-content">
+          <p class="pub-title">{{ pub.title }}</p>
+          <p class="pub-authors">
+            {% if "Recart" in pub.authors %}
+              {{ pub.authors | replace("Recart, C.", "**Recart, C.**") }}
+            {% else %}
+              {{ pub.authors }}
+            {% endif %}
+          </p>
+          {% if pub.conference %}
+          <p class="pub-venue"><em>{{ pub.conference }}</em>{% if pub.location %}, {{ pub.location }}{% endif %}</p>
+          {% endif %}
+          {% if pub.notes %}
+          <p class="pub-note">⭐ {{ pub.notes }}</p>
+          {% endif %}
+          <div class="pub-links">
+            {% if pub.doi and "#PLACEHOLDER" not in pub.doi %}
+            <a href="{{ pub.doi }}" target="_blank" rel="noopener" class="doi-link">
+              DOI ↗
+            </a>
+            {% endif %}
+          </div>
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+    {% else %}
+    <p style="color: var(--color-text-muted);">No conference papers listed yet.</p>
+    {% endif %}
+  </section>
+
+  {# =========================================================================
+     SECTION 3 — PATENTS
+     ========================================================================= #}
+  <section id="patents" aria-labelledby="patents-heading">
+    <h2 id="patents-heading" class="section-heading">Patents</h2>
+
+    {% if publications.patents and publications.patents.length %}
+    <ul class="pub-list">
+      {% for pub in publications.patents %}
+      <li class="pub-item">
+        <span class="pub-year">{{ pub.year }}</span>
+        <div class="pub-content">
+          <p class="pub-title">{{ pub.title }}</p>
+          <p class="pub-authors">
+            {% if "Recart" in pub.authors %}
+              {{ pub.authors | replace("Recart, C.", "**Recart, C.**") }}
+            {% else %}
+              {{ pub.authors }}
+            {% endif %}
+          </p>
+          <p class="pub-meta">Patent No. {{ pub.number }}{% if pub.country %} · {{ pub.country }}{% endif %}{% if pub.date %} · {{ pub.date }}{% endif %}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p style="color: var(--color-text-muted);">No patents listed yet.</p>
+    {% endif %}
+  </section>
+
+</div>

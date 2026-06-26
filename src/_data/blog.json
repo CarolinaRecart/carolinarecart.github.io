@@ -1,0 +1,8 @@
+{
+  "_instructions": "This file is used for blog configuration. Individual blog posts are markdown files in src/blog/posts/. This file can store featured post IDs or blog-level settings. To add a new post, create a .md file in src/blog/posts/ with the front matter shown in the example post.",
+
+  "title": "Blog",
+  "description": "Thoughts on building energy research, academic life, and decarbonization policy.",
+  "show_on_homepage": true,
+  "homepage_post_count": 3
+}

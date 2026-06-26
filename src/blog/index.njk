@@ -1,0 +1,80 @@
+---
+layout: base.njk
+title: Blog
+description: "Thoughts on building energy research, academic life, and decarbonization policy from Dr. Carolina Recart."
+---
+{# =========================================================================
+   BLOG LISTING PAGE (src/blog/index.njk)
+   Shows all posts from src/blog/posts/*.md, newest first.
+
+   HOW TO ADD A NEW BLOG POST:
+   1. Create a new file in src/blog/posts/ — name it something like
+      2025-06-my-post-title.md
+   2. Add front matter at the top of the file:
+      ---
+      title: "My Post Title"
+      date: 2025-06-01
+      description: "A short one-sentence summary shown in the listing."
+      tags:
+        - research
+        - retrofit
+      ---
+   3. Write your post content below the second --- in Markdown
+   4. Save — the listing page updates automatically on next build
+
+   TAGS: Add any tags you like. They appear as small badges on each post card.
+   ========================================================================= #}
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <h1>Blog</h1>
+    <p>{{ blog.description }}</p>
+  </div>
+</header>
+
+<div class="blog-listing">
+
+  {% if collections.posts and collections.posts.length %}
+
+    {% for post in collections.posts %}
+    <article class="post-card">
+
+      <div class="post-card-meta">
+        <time datetime="{{ post.date | htmlDateString }}">
+          {{ post.date | readableDate }}
+        </time>
+        {% if post.data.tags %}
+          {% for tag in post.data.tags %}
+            {% if tag != "posts" %}
+            <span class="tag">{{ tag }}</span>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      </div>
+
+      <h2>
+        <a href="{{ post.url }}">{{ post.data.title }}</a>
+      </h2>
+
+      {% if post.data.description %}
+      <p class="excerpt">{{ post.data.description }}</p>
+      {% endif %}
+
+      <a href="{{ post.url }}" class="btn btn--sm btn--outline">Read more &rarr;</a>
+
+    </article>
+    {% endfor %}
+
+  {% else %}
+
+    <div class="empty-state">
+      <p>No posts yet.</p>
+      <p style="margin-top: var(--space-4); font-size: var(--text-sm);">
+        To add your first post, create a Markdown file in <code>src/blog/posts/</code>
+        with front matter: <code>title</code>, <code>date</code>, and <code>description</code>.
+      </p>
+    </div>
+
+  {% endif %}
+
+</div>

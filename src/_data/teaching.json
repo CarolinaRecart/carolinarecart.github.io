@@ -1,0 +1,173 @@
+{
+  "_instructions": "Add new teaching entries by appending objects to the 'graduate' or 'undergraduate' arrays. Each entry needs: role, course, institution, dates. Optionally add 'notes' for extra context. Add mentoring entries to the 'mentoring' array.",
+
+  "graduate": [
+    {
+      "role": "Guest Lecturer",
+      "course": "Architecture Seminar",
+      "institution": "University of Bio-Bio",
+      "dates": "August 2023–January 2024",
+      "notes": "Designed a two-week graduate course using a design-by-research approach, facilitating the development of innovative research projects in architecture."
+    },
+    {
+      "role": "Guest Lecturer",
+      "course": "Writing Journal Articles",
+      "institution": "University of Bio-Bio",
+      "dates": "August 2023",
+      "notes": "Designed a two-week course for graduate students on writing journal articles and research methodologies in the built environment."
+    },
+    {
+      "role": "Teaching Assistant",
+      "course": "Design Builder Software",
+      "institution": "University of Bio-Bio",
+      "dates": "2017",
+      "notes": "Explained simulation capabilities, inputs, outputs, and their interpretations to 20 graduate students."
+    }
+  ],
+
+  "undergraduate": [
+    {
+      "role": "Teacher",
+      "course": "Design Modes AB 421 (10 credits)",
+      "institution": "University of Strathclyde",
+      "dates": "September 2025–Present",
+      "notes": "Conducted a weekly course module for fourth-year architecture students, covering sustainable, regenerative, and biophilic design."
+    },
+    {
+      "role": "Teacher",
+      "course": "Project S 7P1B10 (5 credits)",
+      "institution": "Eindhoven University of Technology",
+      "dates": "September 2024–October 2024",
+      "notes": "Conducted weekly tutoring for first-year architecture students, guiding them in designing a house considering building energy performance aspects."
+    },
+    {
+      "role": "Instructor",
+      "course": "Research Project (10 credits)",
+      "institution": "University of Bio-Bio",
+      "dates": "August 2023–January 2024",
+      "notes": "Led weekly classes for undergraduate construction management students, emphasizing quantitative research strategies in construction and the built environment."
+    },
+    {
+      "role": "Instructor",
+      "course": "Research Studio (10 credits)",
+      "institution": "University of Bio-Bio",
+      "dates": "August 2023–January 2024",
+      "notes": "Conducted weekly classes for undergraduate architecture students, focusing on research strategies for the built environment."
+    },
+    {
+      "role": "Teaching Assistant",
+      "course": "CEE-291: Introduction to AutoCAD (2 credits)",
+      "institution": "University of Washington",
+      "dates": "2019–2023",
+      "notes": "Held weekly office hours, providing instruction and written feedback on graded assignments for 70 students each quarter."
+    },
+    {
+      "role": "Instructor",
+      "course": "Design Studio VI (10 credits)",
+      "institution": "University of Bio-Bio",
+      "dates": "2016–2017",
+      "notes": "Conducted classes three times per week for undergraduate architecture students, exploring the relationship between built environment quality and occupant dynamics."
+    },
+    {
+      "role": "Instructor",
+      "course": "Structures 3 (3 credits)",
+      "institution": "University of Bio-Bio",
+      "dates": "2016–2017",
+      "notes": "Delivered lectures twice a week on dynamic loads and the impact of earthquakes on structures, with emphasis on residential and mid-rise timber frame and steel structures."
+    },
+    {
+      "role": "Instructor",
+      "course": "Structures 2 (3 credits)",
+      "institution": "University of Bio-Bio",
+      "dates": "2015–2017",
+      "notes": "Taught classes twice per week to 20–25 undergraduate students, focusing on mathematical principles of timber frame and steel structures."
+    },
+    {
+      "role": "Instructor",
+      "course": "Structures 1 (3 credits)",
+      "institution": "University of Bio-Bio",
+      "dates": "2015–2017",
+      "notes": "Conducted classes twice a week for 20–25 undergraduate architecture students, focusing on the mathematical principles underlying timber frame and steel structures."
+    },
+    {
+      "role": "Teaching Assistant",
+      "course": "Design Studio I (10 credits)",
+      "institution": "University of Bio-Bio",
+      "dates": "2012",
+      "notes": "Responded to questions and discussed advisor expectations with undergraduate architecture students, alongside two other faculty members."
+    },
+    {
+      "role": "Teaching Assistant",
+      "course": "Structures 3 (3 credits)",
+      "institution": "University of Bio-Bio",
+      "dates": "2012",
+      "notes": "Provided instruction and offered feedback on assignments during weekly office hours for approximately 20–25 students per semester."
+    },
+    {
+      "role": "Teaching Assistant",
+      "course": "Structures 2 (3 credits)",
+      "institution": "University of Bio-Bio",
+      "dates": "2010–2011",
+      "notes": "Assisted 20–25 students per semester during weekly office hours, providing instruction and feedback on assignments."
+    },
+    {
+      "role": "Teaching Assistant",
+      "course": "Structures 1 (3 credits)",
+      "institution": "University of Bio-Bio",
+      "dates": "2008–2011",
+      "notes": "Provided instruction and feedback during weekly office hours for approximately 20–25 students per semester."
+    }
+  ],
+
+  "mentoring": [
+    {
+      "type": "PhD Supervision",
+      "name": "Shwashreh L.",
+      "institution": "University of Strathclyde",
+      "dates": "2026–Present",
+      "topic": "Acceptance of smart heating and ventilation technologies in social housing"
+    },
+    {
+      "type": "Master's Supervision",
+      "name": "Korecka O.",
+      "institution": "Eindhoven University of Technology",
+      "dates": "2025",
+      "topic": "Feasibility of energy retrofits in low-temperature district heating systems considering different occupant profiles"
+    },
+    {
+      "type": "Undergraduate Dissertation",
+      "name": "Styrling R.",
+      "institution": "University of Strathclyde",
+      "dates": "2025",
+      "topic": "Student-led project"
+    },
+    {
+      "type": "Undergraduate Dissertation",
+      "name": "Edwig E.",
+      "institution": "University of Strathclyde",
+      "dates": "2025",
+      "topic": "Student-led project"
+    },
+    {
+      "type": "Undergraduate Dissertation",
+      "name": "Welsh C.",
+      "institution": "University of Strathclyde",
+      "dates": "2025",
+      "topic": "Student-led project"
+    },
+    {
+      "type": "Undergraduate Dissertation",
+      "name": "Tackie T.",
+      "institution": "University of Strathclyde",
+      "dates": "2025",
+      "topic": "Student-led project"
+    },
+    {
+      "type": "Research Project Mentoring",
+      "name": "Weng L.",
+      "institution": "University of Washington",
+      "dates": "2019",
+      "topic": "Developing research skills including literature review, research methods and data analysis"
+    }
+  ]
+}

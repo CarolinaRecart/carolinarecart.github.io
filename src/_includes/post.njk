@@ -1,0 +1,59 @@
+---
+layout: base.njk
+---
+{# =========================================================================
+   POST LAYOUT (src/_includes/post.njk)
+   Used for individual blog posts. The post content (from the markdown file)
+   is inserted where {{ content | safe }} appears.
+   Front matter values (title, date, description) come from the .md file.
+   ========================================================================= #}
+
+<article class="blog-post" itemscope itemtype="https://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <div class="container container--narrow">
+
+      {# Breadcrumb navigation #}
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span aria-hidden="true"> / </span>
+        <a href="/blog/">Blog</a>
+        <span aria-hidden="true"> / </span>
+        <span aria-current="page">{{ title }}</span>
+      </nav>
+
+      <h1 class="post-title" itemprop="headline">{{ title }}</h1>
+
+      <div class="post-meta">
+        {% if date %}
+        <time datetime="{{ date | htmlDateString }}" itemprop="datePublished">
+          {{ date | readableDate }}
+        </time>
+        {% endif %}
+        {% if tags and tags.length %}
+        <div class="post-tags">
+          {% for tag in tags %}
+            {% if tag != "posts" %}
+            <span class="tag">{{ tag }}</span>
+            {% endif %}
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+
+      {% if description %}
+      <p class="post-description" itemprop="description">{{ description }}</p>
+      {% endif %}
+
+    </div>
+  </header>
+
+  <div class="post-body container container--narrow" itemprop="articleBody">
+    {{ content | safe }}
+  </div>
+
+  <footer class="post-footer container container--narrow">
+    <a href="/blog/" class="btn btn--outline">&larr; Back to Blog</a>
+  </footer>
+
+</article>

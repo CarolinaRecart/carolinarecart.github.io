@@ -1,0 +1,200 @@
+---
+layout: base.njk
+title: Home
+description: "Academic website of Dr. Carolina Recart, Strathclyde Chancellor's Fellow at the University of Strathclyde, Glasgow."
+---
+{# =========================================================================
+   HOME PAGE (src/index.njk)
+   Layout: sidebar on left (photo + links), main content on right.
+
+   TO CUSTOMIZE:
+   - Bio text: edit the <p class="bio"> paragraph below
+   - Photo: replace src/assets/images/profile.jpg with your photo
+   - Social links: edit src/_data/site.json → "social"
+   - News items: edit src/_data/site.json → "news"
+   ========================================================================= #}
+
+<div class="home-layout">
+
+  {# =========================================================================
+     SIDEBAR — Fixed left panel with photo, name, and social links only.
+     Navigation links removed — top nav bar handles navigation.
+     ========================================================================= #}
+  <aside class="home-sidebar" aria-label="Profile and contact links">
+
+    {# PROFILE PHOTO
+       Replace 'profile-placeholder.svg' with your actual photo filename.
+       Recommended: square crop, at least 400×400px, named 'profile.jpg'
+       Place in: src/assets/images/ and update the src attribute below.
+    #}
+    <img
+      src="/assets/images/profile-placeholder.svg"
+      alt="Carolina Recart profile photo"
+      class="profile-photo"
+      width="160"
+      height="160"
+    />
+
+    {# Name and title — pulled from site.json #}
+    <h1 class="sidebar-name">{{ site.name }}</h1>
+    <p class="sidebar-title">{{ site.title }}</p>
+    <p class="sidebar-dept">
+      {{ site.department }}<br />
+      {{ site.institution }}<br />
+      {{ site.city }}
+    </p>
+
+    <div class="sidebar-divider" aria-hidden="true"></div>
+
+    {# -----------------------------------------------------------------------
+       SOCIAL / CONTACT LINKS
+       Edit URLs in src/_data/site.json → "social"
+       Add or remove links here by duplicating/deleting <a> tags.
+       ----------------------------------------------------------------------- #}
+    <nav class="sidebar-social" aria-label="Contact and social profiles">
+
+      {# Email — always shown #}
+      <a href="mailto:{{ site.contact.email_university }}" title="Email">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Email
+      </a>
+
+      {# ORCID #}
+      {% if site.social.orcid and "#PLACEHOLDER" not in site.social.orcid %}
+      <a href="{{ site.social.orcid }}" target="_blank" rel="noopener" title="ORCID">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zm-1.24 5.28h2.48v3.12h-2.48V5.28zm0 5.28h2.48V18.72h-2.48V10.56zm-3.84-5.28c.672 0 1.2.528 1.2 1.2S7.592 7.68 6.92 7.68s-1.2-.528-1.2-1.2.528-1.2 1.2-1.2zm-.84 5.28h1.68V18.72H6.08V10.56z"/></svg>
+        ORCID
+      </a>
+      {% endif %}
+
+      {# Google Scholar #}
+      {% if site.social.google_scholar and "#PLACEHOLDER" not in site.social.google_scholar %}
+      <a href="{{ site.social.google_scholar }}" target="_blank" rel="noopener" title="Google Scholar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 10a8 8 0 0 1 7.162 3.44L24 9.5z"/></svg>
+        Google Scholar
+      </a>
+      {% endif %}
+
+      {# ResearchGate #}
+      {% if site.social.researchgate and "#PLACEHOLDER" not in site.social.researchgate %}
+      <a href="{{ site.social.researchgate }}" target="_blank" rel="noopener" title="ResearchGate">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="50" fill="currentColor"/><text x="10" y="74" font-family="Georgia, serif" font-size="62" font-weight="bold" fill="white">R</text><text x="56" y="46" font-family="Georgia, serif" font-size="30" font-weight="bold" fill="white">G</text></svg>
+        ResearchGate
+      </a>
+      {% endif %}
+
+    </nav>
+
+  </aside>
+
+  {# =========================================================================
+     MAIN CONTENT — Bio and news on the right
+     ========================================================================= #}
+  <main class="home-main" id="main-content">
+
+    {# -----------------------------------------------------------------------
+       BIO SECTION
+       Edit the bio text directly below.
+       ----------------------------------------------------------------------- #}
+    <section class="home-intro" aria-labelledby="home-heading">
+
+      <h2 id="home-heading" class="home-welcome-heading">
+        Welcome
+      </h2>
+      <p class="home-subtitle">
+        {{ site.title }} · {{ site.department }}, {{ site.institution }}
+      </p>
+
+      {# Quick-access buttons
+         "Download CV" replaced with "Projects" as requested.
+      #}
+      <div class="home-cta">
+        <a href="/publications/" class="btn btn--primary">View Publications</a>
+        <a href="/research/" class="btn btn--outline">Research Interests</a>
+        <a href="/projects/" class="btn btn--outline">Projects</a>
+      </div>
+
+    </section>
+
+    {# -----------------------------------------------------------------------
+       CURRENTLY — what I'm working on right now.
+       Edit src/_data/site.json → "currently" (date + items). Update monthly.
+       ----------------------------------------------------------------------- #}
+    {% if site.currently and site.currently.items.length %}
+    <section class="currently-block" aria-labelledby="currently-heading">
+
+      <h2 id="currently-heading" class="section-heading currently-heading">Currently</h2>
+      {% if site.currently.updated %}
+      <span class="currently-updated">Updated {{ site.currently.updated }}</span>
+      {% endif %}
+
+      <ul class="currently-list">
+        {% for item in site.currently.items %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+
+    </section>
+    {% endif %}
+
+    {# -----------------------------------------------------------------------
+       UPDATES
+       Items are pulled from src/_data/site.json → "news" array.
+       Add new items there — newest first. Each has date, type, and text.
+       ----------------------------------------------------------------------- #}
+    <section class="news-section" aria-labelledby="news-heading">
+
+      <h2 id="news-heading" class="section-heading">Updates</h2>
+
+      {% if site.news and site.news.length %}
+        {% for item in site.news %}
+          {% if loop.index <= 5 %}
+          <article class="news-item">
+            <span class="news-date">{{ item.date }}</span>
+            <div class="news-body">
+              {% if item.type %}<span class="news-type">{{ item.type }}</span>{% endif %}
+              <span class="news-text">{{ item.text }}</span>
+            </div>
+          </article>
+          {% endif %}
+        {% endfor %}
+      {% else %}
+        <p style="color: var(--color-text-muted);">No updates yet. Add them to <code>src/_data/site.json</code> under the <code>news</code> key.</p>
+      {% endif %}
+
+    </section>
+
+    {# -----------------------------------------------------------------------
+       RECENT BLOG POSTS (optional — shows last 3 posts)
+       Remove this section if you don't want blog posts on the home page.
+       ----------------------------------------------------------------------- #}
+    {% if collections.posts and collections.posts.length %}
+    <section aria-labelledby="blog-heading" style="margin-top: var(--space-12);">
+
+      <h2 id="blog-heading" class="section-heading">Recent Posts</h2>
+
+      {% for post in collections.posts | limit(3) %}
+      <article class="post-card">
+        <div class="post-card-meta">
+          <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+        </div>
+        <h3 style="margin-top: 0; margin-bottom: var(--space-2);">
+          <a href="{{ post.url }}">{{ post.data.title }}</a>
+        </h3>
+        {% if post.data.description %}
+        <p class="excerpt">{{ post.data.description }}</p>
+        {% endif %}
+        <a href="{{ post.url }}" class="btn btn--sm btn--outline">Read more</a>
+      </article>
+      {% endfor %}
+
+      <p style="margin-top: var(--space-6);">
+        <a href="/blog/" class="btn btn--outline">All posts &rarr;</a>
+      </p>
+
+    </section>
+    {% endif %}
+
+  </main>
+
+</div>

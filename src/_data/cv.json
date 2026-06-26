@@ -1,0 +1,194 @@
+{
+  "_instructions": "This file drives the CV page. Update each section as needed. The full CV PDF should be placed at src/assets/files/cv.pdf.",
+
+  "education": [
+    {
+      "degree": "Ph.D., Civil and Environmental Engineering",
+      "institution": "University of Washington, United States",
+      "dates": "2018–2023",
+      "advisor": "Carrie Sturts Dossick, Ph.D.",
+      "notes": "Dissertation: 'Hygrothermal Performance of Energy Retrofits in Buildings: An Assessment of the Residential Building Stock in the U.S.' — Distinction: Excellence"
+    },
+    {
+      "degree": "M.S., Civil and Environmental Engineering",
+      "institution": "University of Washington, United States",
+      "dates": "2018–2021",
+      "advisor": "Amy Kim, Ph.D.",
+      "notes": ""
+    },
+    {
+      "degree": "M.S., Timber Construction",
+      "institution": "University of Bio-Bio, Chile",
+      "dates": "2013–2017",
+      "advisor": "Dr. Ariel Bobadilla",
+      "notes": "Thesis: Solutions to Improve the Airtightness in Social Timber Frame Housing"
+    },
+    {
+      "degree": "B.S., Architecture",
+      "institution": "University of Bio-Bio, Chile",
+      "dates": "2006–2012",
+      "advisor": "Jorge Harris",
+      "notes": "Best Thesis Project Award — Thesis: Cultural Center ARMO: Art in Movement"
+    }
+  ],
+
+  "experience": [
+    {
+      "title": "Strathclyde Chancellor's Fellow",
+      "institution": "University of Strathclyde, Glasgow, United Kingdom",
+      "department": "Department of Architecture",
+      "dates": "2025–Present",
+      "bullets": []
+    },
+    {
+      "title": "Postdoctoral Research Fellow — MIESDOC Project",
+      "institution": "Eindhoven University of Technology, The Netherlands",
+      "department": "Eindhoven Institute for Renewable Energy Systems / BEHeaT program",
+      "dates": "2024–2025",
+      "bullets": [
+        "Exploring advanced building performance simulations for future energy retrofitting scenarios",
+        "Conducting advanced energy simulations integrating occupants' energy consumption and heating practices",
+        "Evaluating deep energy retrofits vs. unconventional retrofit packages (costs, environmental impacts, energy optimization)",
+        "Contributed to 4 conference papers and 3 peer review articles"
+      ]
+    },
+    {
+      "title": "Ph.D. Fellow — Unintended Consequences of Energy Retrofits",
+      "institution": "University of Washington, United States",
+      "department": "Department of Civil and Environmental Engineering",
+      "dates": "2018–2023",
+      "bullets": [
+        "Conducted extensive review of energy retrofits and inadvertent repercussions in residential buildings",
+        "Trained in hygrothermal simulation using WUFI Pro",
+        "Formulated a parametric simulation approach for hygrothermal performance of energy retrofits",
+        "Expertise in statistical analysis (linear/multilinear regressions, logistic regression, GLM, multinomial regression)",
+        "Comprehensive statistical analysis of a large survey on fuel poverty in the U.S. and Washington State",
+        "Contributed to 7 publications and 6 presentations (funded by ANID, Fulbright, UW)"
+      ]
+    },
+    {
+      "title": "Principal Investigator — FONDEF VIU",
+      "institution": "University of Bio-Bio, Chile",
+      "department": "",
+      "dates": "2015–2017",
+      "bullets": [
+        "Conducted testing of strategies to elevate airtightness in low-income housing",
+        "Developed a prefabricated cladding system for energy efficiency in Chilean residential buildings",
+        "Patented cladding system (Patent No. 58058, Chile)",
+        "Funded by ANID (CLP $25,500,000)"
+      ]
+    },
+    {
+      "title": "Research Assistant — CD-Ines",
+      "institution": "University of Bio-Bio, Chile",
+      "department": "P.I. Ariel Bobadilla, Ph.D.",
+      "dates": "2015–2016",
+      "bullets": [
+        "Engineered an IT tool with predictive capabilities for airtightness in pre-existing Chilean residential buildings",
+        "Contributed to 1 publication, 1 IT tool, and 2 presentations",
+        "Funded by CLP $21,330,000"
+      ]
+    },
+    {
+      "title": "Research Assistant — Airtightness in Chilean Building Stock",
+      "institution": "University of Bio-Bio, Chile",
+      "department": "P.I. Ariel Bobadilla, Ph.D.",
+      "dates": "2013–2014",
+      "bullets": [
+        "Review of strategies to improve airtightness in existing and new Chilean buildings",
+        "1 publication (funded by ANID)"
+      ]
+    }
+  ],
+
+  "current_position": {
+    "title": "Strathclyde Chancellor's Fellow",
+    "department": "Department of Architecture",
+    "institution": "University of Strathclyde",
+    "location": "Glasgow, United Kingdom",
+    "dates": "2025–Present"
+  },
+
+  "honors": [
+    {
+      "award": "Fulbright BIO Scholarship and ANID (US $92,880)",
+      "year": "2018–2023",
+      "description": "Awarded through a highly competitive selection process to support doctoral research in the United States for low-income students"
+    },
+    {
+      "award": "University of Washington, Tuition Fee Exemption (US $112,500)",
+      "year": "2018–2020",
+      "description": "Granted as part of a merit-based fellowship program to support outstanding doctoral candidates at the University of Washington"
+    },
+    {
+      "award": "Linda Latham Scholarship, ACEEE Summer Studies",
+      "year": "2020",
+      "description": "Outstanding Student Research"
+    },
+    {
+      "award": "Fellow of the Royal Academy of Engineering",
+      "year": "2016",
+      "description": "Royal Academy of Engineering, England"
+    },
+    {
+      "award": "Best Thesis Project Award",
+      "year": "2013",
+      "description": "Architecture, University of Bio-Bio"
+    },
+    {
+      "award": "First Place, Regional Contest \"Plaza para Dichato\"",
+      "year": "2011",
+      "description": "Regional Government, Chile"
+    }
+  ],
+
+  "certifications": [
+    {
+      "name": "Associate Fellowship in Teaching and Learning in Higher Education (AFHEA)",
+      "issuer": "Advance HE, United Kingdom",
+      "year": "2025"
+    },
+    {
+      "name": "Certified Passive House Designer",
+      "issuer": "Passive House Institute, Germany",
+      "validity": "2022–2027"
+    },
+    {
+      "name": "Early Career Board Member, Journal of Building Performance Simulation",
+      "issuer": "Taylor & Francis",
+      "year": "2024"
+    },
+    {
+      "name": "Passive House Network Member",
+      "issuer": "United States",
+      "validity": "2022–2023"
+    }
+  ],
+
+  "service": [
+    {
+      "role": "Research, Knowledge Exchange and Innovation Culture Network (RKEI) Committee Member",
+      "institution": "University of Strathclyde",
+      "dates": "2025–Present",
+      "description": "Committee for shared research culture vision"
+    },
+    {
+      "role": "Campus Sustainability Fund Committee Member",
+      "institution": "University of Washington",
+      "dates": "2018–2020",
+      "description": "Reviewing and allocating $500K–$1.2M annual fund for student sustainability initiatives"
+    },
+    {
+      "role": "Academic Secretary, Architecture School",
+      "institution": "University of Bio-Bio",
+      "dates": "2017",
+      "description": "Oversaw new undergraduate curriculum rollout"
+    },
+    {
+      "role": "International Relationship Coordinator, Architecture School",
+      "institution": "University of Bio-Bio",
+      "dates": "2015–2017",
+      "description": "Coordinated exchange students and partner institution alignment"
+    }
+  ]
+}

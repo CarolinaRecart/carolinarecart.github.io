@@ -1,0 +1,92 @@
+{
+  "_instructions": "This file contains global site information used across all pages. Update the placeholder values below with real URLs and details. Fields marked PLACEHOLDER need your attention.",
+
+  "name": "Carolina Recart",
+  "title": "Strathclyde Chancellor's Fellow",
+  "department": "Department of Architecture",
+  "institution": "University of Strathclyde",
+  "city": "Glasgow",
+  "country": "United Kingdom",
+
+  "description": "Academic website of Dr. Carolina Recart, Strathclyde Chancellor's Fellow at the University of Strathclyde. Research in building energy retrofits, hygrothermal performance, and decarbonization of the built environment.",
+
+  "url": "https://carolinarecart.github.io",
+
+  "contact": {
+    "email_university": "carolina.recart@strath.ac.uk",
+    "email_personal": "carolina.recart@gmail.com",
+    "phone": "+44 7350 150330",
+    "address": "Department of Architecture, University of Strathclyde, Glasgow, United Kingdom"
+  },
+
+  "social": {
+    "_note": "Replace the # placeholders below with your actual profile URLs.",
+    "Linkedin": "#PLACEHOLDER-add-your-Linkedin-URL-or-remove-this-line",
+    "orcid": "https://orcid.org/0000-0002-4969-3843",
+    "google_scholar": "https://scholar.google.com/citations?user=wqMJXXUAAAAJ&hl=en&oi=ao",
+    "researchgate": "https://www.researchgate.net/profile/Carolina-Recart-2",
+    "github": "#PLACEHOLDER-add-your-GitHub-URL-or-remove-this-line"
+  },
+
+  "currently": {
+    "_note": "Short list of what you're working on right now. Edit each month. 'updated' is the date shown to readers. 'items' are plain lines — keep them short.",
+    "updated": "June 2026",
+    "items": [
+      "Developing Design HOPES II with Laura MacLean and Parastoo Sali — a home–health environment assessment toolkit to support healthcare practitioners, with workshops and design experiences to come. A new intern is joining the toolkit work soon.",
+      "Serving as the Department of Architecture's EDI representative to the faculty, and chairing EDI for the department.",
+      "Academic lead for the ASHRAE Strathclyde Student Branch, mentoring postgraduate researchers and growing the student network.",
+      "Committee member of the Research, Knowledge Exchange and Innovation Culture Network (RKEI) at Strathclyde, with activities planned around welcome week.",
+      "Teaching regenerative design, and developing a building energy simulation course for architecture students."
+    ]
+  },
+
+  "news": [
+    {
+      "_note": "Add updates here — newest first. Each item has date, type, and text. 'type' is a short label, e.g. Paper, Talk, Teaching, Service, Conference, Appointment, Award.",
+      "date": "Jun 2026",
+      "type": "Conference",
+      "text": "Co-hosted the UKIEG conference at Strathclyde with Alejandro Moreno-Rangel — around 40 participants shared research on indoor environmental quality and energy retrofit across the UK, including a team from Sweden."
+    },
+    {
+      "date": "2026",
+      "type": "Teaching",
+      "text": "Wrapped up an academic writing workshop for architecture PhD students — four sessions on writing conference papers."
+    },
+    {
+      "date": "2026",
+      "type": "Service",
+      "text": "Became academic lead of the ASHRAE Strathclyde Student Branch. An interim postgraduate board was elected: Praveen (President), Stephanie (Vice-President), and Temi (Secretary)."
+    },
+    {
+      "date": "2026",
+      "type": "Appointment",
+      "text": "Took on the role of EDI representative for the Department of Architecture at faculty level, and chair of EDI for the department."
+    },
+    {
+      "date": "2026",
+      "type": "Appointment",
+      "text": "Appointed committee member of the Research, Knowledge Exchange and Innovation Culture Network (RKEI) at the University of Strathclyde."
+    },
+    {
+      "date": "2025",
+      "type": "Appointment",
+      "text": "Appointed Strathclyde Chancellor's Fellow at the University of Strathclyde, Glasgow."
+    },
+    {
+      "date": "2025",
+      "type": "Paper",
+      "text": "Paper accepted at CLIMA 2025: 'Hygrothermal Risks from Vapor-Impermeable Insulation in Existing Housing.'"
+    },
+    {
+      "date": "2025",
+      "type": "Award",
+      "text": "Received Associate Fellowship in Teaching and Learning in Higher Education (UK)."
+    }
+  ],
+
+  "open_graph": {
+    "_note": "Open Graph tags improve how this site appears when shared on social media. Update the image path once you have a profile photo.",
+    "image": "/assets/images/profile-placeholder.svg",
+    "type": "website"
+  }
+}

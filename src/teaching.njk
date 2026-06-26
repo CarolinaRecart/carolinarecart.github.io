@@ -1,0 +1,132 @@
+---
+layout: base.njk
+title: Teaching
+description: "Teaching and mentoring by Dr. Carolina Recart at the University of Strathclyde, Eindhoven University of Technology, and the University of Washington."
+---
+{# =========================================================================
+   TEACHING PAGE (src/teaching.njk)
+   Data source: src/_data/teaching.json
+
+   HOW TO UPDATE:
+   - Graduate courses: edit the "graduate" array in teaching.json
+   - Undergraduate courses: edit the "undergraduate" array
+   - Mentoring: edit the "mentoring" array
+   - Each entry needs: role, course, institution, dates
+   - Optional: notes (shown in italic below the course name)
+   ========================================================================= #}
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <h1>Teaching</h1>
+    <p>Courses, supervision, and mentoring across architecture, engineering, and sustainability</p>
+  </div>
+</header>
+
+<div class="page-content">
+
+  {# =========================================================================
+     GRADUATE COURSES
+     ========================================================================= #}
+  <section aria-labelledby="grad-heading">
+    <h2 id="grad-heading" class="section-heading">Graduate Courses</h2>
+
+    {% if teaching.graduate and teaching.graduate.length %}
+    <div style="overflow-x: auto;">
+      <table class="teaching-table" aria-label="Graduate courses">
+        <thead>
+          <tr>
+            <th scope="col">Role</th>
+            <th scope="col">Course</th>
+            <th scope="col">Institution</th>
+            <th scope="col">Dates</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for entry in teaching.graduate %}
+          <tr>
+            <td><span class="role-badge">{{ entry.role }}</span></td>
+            <td>
+              {{ entry.course }}
+              {% if entry.notes and "#PLACEHOLDER" not in entry.notes %}
+              <br /><em style="font-size: var(--text-xs); color: var(--color-text-muted);">{{ entry.notes }}</em>
+              {% endif %}
+            </td>
+            <td>{{ entry.institution }}</td>
+            <td style="white-space: nowrap;">{{ entry.dates }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% else %}
+    <p style="color: var(--color-text-muted);">No graduate courses listed yet. Add entries to <code>src/_data/teaching.json</code>.</p>
+    {% endif %}
+  </section>
+
+  {# =========================================================================
+     UNDERGRADUATE COURSES
+     ========================================================================= #}
+  <section aria-labelledby="undergrad-heading">
+    <h2 id="undergrad-heading" class="section-heading">Undergraduate Courses</h2>
+
+    {% if teaching.undergraduate and teaching.undergraduate.length %}
+    <div style="overflow-x: auto;">
+      <table class="teaching-table" aria-label="Undergraduate courses">
+        <thead>
+          <tr>
+            <th scope="col">Role</th>
+            <th scope="col">Course</th>
+            <th scope="col">Institution</th>
+            <th scope="col">Dates</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for entry in teaching.undergraduate %}
+          <tr>
+            <td><span class="role-badge">{{ entry.role }}</span></td>
+            <td>
+              {{ entry.course }}
+              {% if entry.notes and "#PLACEHOLDER" not in entry.notes %}
+              <br /><em style="font-size: var(--text-xs); color: var(--color-text-muted);">{{ entry.notes }}</em>
+              {% endif %}
+            </td>
+            <td>{{ entry.institution }}</td>
+            <td style="white-space: nowrap;">{{ entry.dates }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% else %}
+    <p style="color: var(--color-text-muted);">No undergraduate courses listed yet.</p>
+    {% endif %}
+  </section>
+
+  {# =========================================================================
+     MENTORING & SUPERVISION
+     ========================================================================= #}
+  <section aria-labelledby="mentoring-heading">
+    <h2 id="mentoring-heading" class="section-heading">Mentoring &amp; Supervision</h2>
+
+    {% if teaching.mentoring and teaching.mentoring.length %}
+    <div class="mentoring-grid">
+      {% for entry in teaching.mentoring %}
+      <article class="mentoring-card">
+        <p class="mentoring-type">{{ entry.type }}</p>
+        <p class="mentoring-detail">
+          {{ entry.institution }}<br />
+          {{ entry.dates }}
+          {% if entry.topic and "#PLACEHOLDER" not in entry.topic %}
+          <br /><em>{{ entry.topic }}</em>
+          {% endif %}
+        </p>
+      </article>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p style="color: var(--color-text-muted);">No mentoring entries listed yet. Add entries to <code>src/_data/teaching.json</code>.</p>
+    {% endif %}
+  </section>
+
+
+</div>

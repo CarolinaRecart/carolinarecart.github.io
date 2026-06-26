@@ -1,0 +1,61 @@
+{
+  "_instructions": "This file drives the Research page. Add new interests to the 'interests' array, new themes to 'themes', and new tools to 'tools'. The 'current_projects' field is a short list — full project details live in projects.json.",
+
+  "interests": [
+    "Decarbonization of the built environment",
+    "Energy retrofits in residential buildings",
+    "Hygrothermal performance and moisture risks",
+    "Occupant behavior and heating practices",
+    "Building performance simulation",
+    "Planetary boundaries and building design",
+    "Fuel poverty and climate justice",
+    "Passive house design and standards"
+  ],
+
+  "themes": [
+    {
+      "id": "retrofit",
+      "title": "Energy Retrofit Strategies",
+      "icon": "🏠",
+      "summary": "Developing evidence-based approaches to decarbonizing existing residential buildings, with particular attention to buildings serving low-income and vulnerable populations.",
+      "detail": "My work examines how energy efficiency measures interact with building fabric, occupant behavior, and climate to produce outcomes that are sometimes unexpected. I use simulation tools alongside field studies to understand and predict these interactions, aiming to develop retrofit strategies that perform reliably across a range of real-world conditions."
+    },
+    {
+      "id": "hygrothermal",
+      "title": "Hygrothermal Performance",
+      "icon": "💧",
+      "summary": "Investigating moisture-related risks that can arise from energy efficiency measures, particularly in climates with high rainfall or humidity.",
+      "detail": "Air sealing and insulation can inadvertently increase condensation risk within wall assemblies if not carefully designed. I model these interactions using WUFI Pro and other hygrothermal simulation tools to identify where risks arise and how to mitigate them through appropriate material selection and ventilation design."
+    },
+    {
+      "id": "occupant",
+      "title": "Occupant Behavior & Sufficiency",
+      "icon": "👥",
+      "summary": "Understanding how people actually heat their homes — and what this means for energy modeling and retrofit design.",
+      "detail": "Standard energy models assume idealized occupant behavior. My research integrates actual heating practices, including partial heating, intermittent use, and culturally specific patterns, into retrofit decision-making. This 'sufficiency-oriented' approach leads to more realistic predictions and more equitable outcomes."
+    },
+    {
+      "id": "equity",
+      "title": "Fuel Poverty & Climate Justice",
+      "icon": "⚖️",
+      "summary": "Examining the intersection of energy access, housing quality, and social equity in retrofit policy.",
+      "detail": "Energy poverty disproportionately affects lower-income households in older, less efficient housing. My research examines how retrofit programs can be designed to prioritize those most in need while avoiding displacement or increased costs for vulnerable residents."
+    }
+  ],
+
+  "tools": [
+    "WUFI Pro (hygrothermal simulation)",
+    "EnergyPlus",
+    "DesignBuilder",
+    "Python (data analysis)",
+    "R (statistical analysis)"
+  ],
+
+  "current_projects": [
+    {
+      "title": "MIESDOC – Modelling Innovative Scenarios for Future Domestic Comfort",
+      "institution": "Eindhoven University of Technology",
+      "dates": "2024–2025"
+    }
+  ]
+}
