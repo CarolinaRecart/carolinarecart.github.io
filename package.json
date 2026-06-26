@@ -1,0 +1,14 @@
+{
+  "name": "carolina-recart-academic-website",
+  "version": "1.0.0",
+  "description": "Academic website for Dr. Carolina Recart, Strathclyde Chancellor's Fellow",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "deploy": "npm run build && gh-pages -d _site"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "gh-pages": "^6.1.1"
+  }
+}
