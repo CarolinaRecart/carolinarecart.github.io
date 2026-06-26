@@ -19,7 +19,7 @@
       "institution": "University of Strathclyde",
       "dates": "Planned",
       "role": "Principal Investigator",
-      "description": "A planned programme integrating physiological sensing with indoor environmental and energy monitoring, to right-size retrofit strategies around real occupant needs and reduce the gap between predicted and actual building performance.",
+      "description": "A planned programme integrating physiological sensing with indoor environmental and energy monitoring, to right-size retrofit strategies around occupant needs considering planetary boundaries",
       "status": "Planned",
       "url": "#PLACEHOLDER-add-project-URL-if-available"
     },
@@ -30,9 +30,9 @@
       "dates": "2024–2025",
       "role": "Postdoctoral Research Fellow",
       "description": "Exploring advanced building performance simulations for future energy retrofitting scenarios, with a focus on occupant comfort and energy demand under different climate trajectories.",
-      "funding": "Eindhoven Institute for Renewable Energy",
+      "funding": "Eindhoven Institute for Renewable Energy Systems (EIRES)",
       "status": "Completed",
-      "url": "#PLACEHOLDER-add-project-URL-if-available"
+      "url": "https://www.tue.nl/en/research/research-groups/building-physics-and-services/building-performance/modelling-innovative-use-scenarios-for-future-domestic-comfort-miesdoc"
     },
     {
       "id": "hygrothermal-uw",
